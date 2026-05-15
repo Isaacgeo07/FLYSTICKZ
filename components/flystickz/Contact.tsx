@@ -29,8 +29,8 @@ export default function Contact() {
   }
 
   const whatsappNumbers = [
-    { label: 'Sales', number: '+2348012345678', displayNumber: '+234 801 234 5678' },
-    { label: 'Support', number: '+2348098765432', displayNumber: '+234 809 876 5432' },
+    { label: 'Support 1', number: '+2348078182087', displayNumber: '+234 807 818 2087' },
+    { label: 'Support 2', number: '+2348134545603', displayNumber: '+234 813 454 5603' },
   ]
 
   const getWhatsAppLink = (number: string) => {

@@ -8,7 +8,7 @@ const artists = [
   {
     id: 1,
     name: 'DrummerboyStanley',
-    role: 'Drummer & Music Producer',
+    role: 'Drummer, Music Producer & Flystickz Ambassador',
     location: 'Lagos, Nigeria',
     experience: '15+ years',
     bio: 'A renowned Nigerian drummer and music producer based in Lagos with extensive experience in the entertainment industry.',
@@ -19,7 +19,7 @@ const artists = [
   {
     id: 2,
     name: 'Shaba Segun',
-    role: 'Musician & Producer',
+    role: 'Drummer, Music Producer & Flystickz Ambassador',
     location: 'Ondo State, Nigeria',
     experience: '25+ years',
     bio: 'An accomplished musician and producer with over two decades of experience in the music industry.',
@@ -30,7 +30,7 @@ const artists = [
   {
     id: 3,
     name: 'Babykelo',
-    role: 'Dynamic Performer',
+    role: 'Drummer, Music Producer & Flystickz Ambassador',
     location: 'Nigeria',
     experience: '12+ years',
     bio: 'Has honed his craft to perfection, delivering powerful and dynamic performances that resonate with audiences worldwide.',
@@ -41,13 +41,24 @@ const artists = [
   {
     id: 4,
     name: 'Star Blessing',
-    role: 'Flystickz Ambassador',
+    role: 'Drummer & Flystickz Ambassador',
+    location: 'Nigeria',
+    experience: '10+ years',
+    bio: 'Known for her dexterity across various genres including Jazz, Rock, Latin, Funk, Gospel, Hip-Hop, R&B, Pop, and African rhythms.',
+    genres: ['Afro', 'Gospel', 'Rock',],
+    image: 'https://flystickz.com/wp-content/uploads/2025/10/Star-Blessing-1-1024x683.jpg',
+    signature: true,
+  },
+  {
+    id: 5,
+    name: 'DnathDrums',
+    role: 'Drummer & Flystickz Ambassador',
     location: 'Nigeria',
     experience: '10+ years',
     bio: 'Known for his dexterity across various genres including Jazz, Rock, Latin, Funk, Gospel, Hip-Hop, R&B, Pop, and African rhythms.',
-    genres: ['Jazz', 'Rock', 'Latin', 'Funk'],
-    image: 'https://flystickz.com/wp-content/uploads/2025/10/Star-Blessing-1-1024x683.jpg',
-    signature: false,
+    genres: ['Gospel', 'Rock', 'Worship', ],
+    image: 'https://flystickz.com/wp-content/uploads/2025/10/IMG_8539-1024x1536.jpg',
+    signature: true,
   },
 ]
 
@@ -172,21 +183,7 @@ export default function Artists() {
           ))}
         </div>
 
-        {/* View All Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-8 md:mt-12"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(212, 168, 83, 0.3)' }}
-            whileTap={{ scale: 0.95 }}
-            className="px-6 md:px-8 py-2.5 md:py-3 border border-primary/50 text-foreground font-semibold uppercase tracking-wider rounded-sm hover:bg-primary/10 transition-colors text-sm md:text-base"
-          >
-            View All Artists
-          </motion.button>
-        </motion.div>
+       
 
         {/* Artist Detail Modal */}
         <AnimatePresence>

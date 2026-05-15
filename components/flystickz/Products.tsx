@@ -63,18 +63,17 @@ const products = [
 
 const packages = [
   {
-    name: 'Premium Package',
+    name: '5A & 7A Premium Package',
     description: 'A pair of our meticulously designed drumsticks',
     price: 13,
-    includes: ['One Pair of Drumsticks', 'Premium Quality', 'Balanced Design'],
+    includes: ['One Pair of Premium Quality Drumsticks', 'Lightweight and Balanced', 'Affordable Priced', 'Select Signature Series'],
     highlight: false,
   },
   {
     name: 'Deluxe Box',
-    description: 'The ultimate drumming package with premium accessories',
+    description: 'A box with a Face Towel',
     price: 5,
-    originalPrice: 9,
-    includes: ['One Pair of Drumsticks', 'Branded Face Towel', 'Gift-Ready Packaging', 'Exclusive Branding'],
+    includes: ['Complete Set', 'Gift-ready Packaging','Exclusive Branding', 'Select Signature Series' ],
     highlight: true,
   },
 ]
@@ -213,7 +212,7 @@ export default function Products() {
               >
                 {pkg.highlight && (
                   <div className="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2 px-3 md:px-4 py-0.5 md:py-1 bg-primary text-primary-foreground text-[10px] md:text-xs font-semibold uppercase tracking-wider rounded-full whitespace-nowrap">
-                    Best Value
+                    Special Pack
                   </div>
                 )}
 
