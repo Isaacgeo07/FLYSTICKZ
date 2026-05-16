@@ -164,43 +164,45 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu - Full Screen */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="md:hidden fixed inset-0 top-[56px] bg-background/98 backdrop-blur-lg z-40"
+            className="md:hidden fixed inset-0 top-[72px] bg-black/95 backdrop-blur-2xl z-40 border-t border-white/10"
           >
             <motion.nav
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="flex flex-col items-center justify-center h-full gap-6 p-6"
+              transition={{ duration: 0.3 }}
+              className="flex flex-col items-center pt-10 gap-5 px-6"
             >
               {navLinks.map((link, index) => (
                 <motion.button
                   key={link.name}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: index * 0.08 }}
                   onClick={() => scrollToSection(link.href)}
-                  className={`text-2xl font-display uppercase tracking-widest transition-colors ${
+                  className={`w-full max-w-sm py-4 rounded-2xl border text-lg uppercase tracking-widest transition-all duration-300 ${
                     activeSection === link.href.replace('#', '')
-                      ? 'text-primary'
-                      : 'text-foreground/70'
+                      ? 'bg-primary text-black border-primary font-bold'
+                      : 'bg-white/5 text-white border-white/10 hover:bg-white/10'
                   }`}
                 >
                   {link.name}
                 </motion.button>
               ))}
+
               <motion.button
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: navLinks.length * 0.1 }}
+                transition={{ delay: navLinks.length * 0.08 }}
                 onClick={() => scrollToSection('#products')}
-                className="mt-4 px-8 py-4 bg-primary text-primary-foreground font-semibold text-lg uppercase tracking-wider rounded-sm"
+                className="mt-4 w-full max-w-sm py-4 bg-primary text-black font-bold text-lg uppercase tracking-wider rounded-2xl shadow-lg"
               >
                 Shop Now
               </motion.button>
